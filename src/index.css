@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #06070a;
+    color: #f1f5f9;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #050608;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
+
+/* 3D Transform Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.perspective-1500 {
+  perspective: 1500px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Glowing utilities */
+.glow-cyan {
+  box-shadow: 0 0 30px -5px rgba(6, 182, 212, 0.35);
+}
+
+.glow-gold {
+  box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.35);
+}
+
+.glow-purple {
+  box-shadow: 0 0 35px -5px rgba(168, 85, 247, 0.3);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+}
+
+/* Moving Border Glow Animation */
+@keyframes borderGlowPulse {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-border-glow {
+  background-size: 200% 200%;
+  animation: borderGlowPulse 4s ease infinite;
+}
+
+.obsidian-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(6, 10, 24, 0.85) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
